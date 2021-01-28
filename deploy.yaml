@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myrest-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myrest-api
+  template:
+    metadata:
+      labels:
+        app: myrest-api
+    spec:
+      containers:
+      - name: myrest-api
+        image: surekhadock2020/myrestapi
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 9090

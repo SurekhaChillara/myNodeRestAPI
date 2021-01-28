@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myrest-api
+spec:
+  type: NodePort # remove if using ClusterIp
+  ports:
+    - port: 9090
+      targetPort: 9090
+      nodePort: 32002
+  selector:
+    app: myrest-api
