@@ -1,6 +1,4 @@
-FROM node
-COPY package*.json /app/node
-RUN apt-get update 
-COPY . .
-EXPOSE 9090
+FROM node:alpine
+COPY ./ ./
+RUN npm install
 CMD [ "npm","start" ]

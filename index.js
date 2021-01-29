@@ -1,7 +1,7 @@
 const express = require("express");
 // const mysql = require("mysql");
 const app = express();
-const port = 3005;
+const port = 8085;
 
 app.get("/", (req, res) => res.send("Welcome to WebApp, Please hit /hello or /hello/name after the url !!!"));
 
