@@ -9,7 +9,7 @@ Commands to do the successful Deployment are as follows
 1. Download or Clone this repository.
 2. cd node-api  // switch to node-api folder
 3. docker build -t <Image-Name> . [or <PathforDockerfile>]  // Build the Docker Image using Dockerfile
-4. docker run -p 8085:8085 myrestapi // exposing localhost port to docker container port
+4. docker run -p 8085:8085 myrestapi // exposing Docker Container port to LocalHost port
 5. docker push <dockerusername>/<Image-Name>:latest //Push the Image to Docker Hub (In my case it is docker push surekhadock2020/myrestapi:latest) 
 After sucessfully building and Pushing the Image,
 6. minikube start  // Start minikube  
